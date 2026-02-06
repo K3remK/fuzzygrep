@@ -63,6 +63,9 @@ Tony Abou-Assaleh <taa@acm.org> maintains GNU grep since Oct 2007.
 Jim Meyering <jim@meyering.net> and Paolo Bonzini <bonzini@gnu.org>
 began maintaining GNU grep in Nov 2009.  Paolo bowed out in 2012.
 
+Kerem Karamanlıoğlu <kerem7812@gmail.com> implemented the fuzzy search
+functionality (approximate matching) in 2025.
+
 ;; Local Variables:
 ;; coding: utf-8
 ;; End:

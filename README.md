@@ -22,21 +22,40 @@ Standard `grep` is a powerful tool for exact pattern matching, but it fails when
 
 ## 🛠️ Installation & Building
 
-To build the project from source, you will need a standard C build environment (GCC/Clang, Make).
+### Prerequisites
+
+To build the project, you will need a standard C development environment with the following tools:
+
+*   `automake` (includes `aclocal`)
+*   `autoconf`
+*   `make`
+*   `gcc` (or another C compiler)
+
+### Build Steps
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/fuzzygrep.git
+    git clone https://github.com/K3remK/fuzzygrep.git
     cd fuzzygrep
     ```
 
 2.  **Build the project:**
-    Run the following command in the project root:
+    Run the following commands in the project root:
+
     ```bash
+    aclocal -I m4 --force
+    automake
+    ./configure
     make
     ```
 
-    This will compile the modified `grep` executable in the `src` directory.
+    **What these commands do:**
+    *   `aclocal -I m4 --force`: Regenerates `aclocal.m4` macros, forcing an update and including macros from the `m4` directory.
+    *   `automake`: Automatically generates `Makefile.in` templates compliant with GNU standards.
+    *   `./configure`: Checks your system for dependencies and configures the build environment, generating the final `Makefile`.
+    *   `make`: Compiles the source code and links the executable.
+
+    The compiled `grep` executable will be located in the `src/` directory.
 
 ## 📖 Usage
 

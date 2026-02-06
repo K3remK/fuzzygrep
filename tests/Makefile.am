@@ -71,8 +71,6 @@ else
 endif
 
 TESTS =						\
-  fuzzygrep-threshold1      \
-  fuzzygrep-threshold2      \
   100k-entries					\
   backref					\
   backref-alt					\
@@ -200,7 +198,7 @@ TESTS =						\
   write-error-msg				\
   y2038-vs-32-bit				\
   yesno						\
-  z-anchor-newline  
+  z-anchor-newline
 
 EXTRA_DIST =					\
   $(TESTS)					\

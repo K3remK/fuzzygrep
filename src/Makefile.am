@@ -29,7 +29,7 @@ grep_SOURCES =					\
   grep.c					\
   kwsearch.c					\
   kwset.c					\
-  searchutils.c              \
+  searchutils.c             \
   fuzzysearch.c
 if USE_PCRE
 grep_SOURCES += pcresearch.c

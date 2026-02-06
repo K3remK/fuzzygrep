@@ -1,0 +1,46 @@
+# Object files
+*.o
+*.obj
+*.lo
+
+# Executables
+*.exe
+*.dll
+*.so
+*.dylib
+src/grep
+src/egrep
+src/fgrep
+
+# Autotools / Build System generated files
+Makefile
+Makefile.in
+.deps/
+.libs/
+autom4te.cache/
+aclocal.m4
+config.h
+config.h.in
+config.log
+config.status
+configure
+libtool
+stamp-h1
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+
+# Output artifacts
+*.out
+*.log
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Test artifacts
+tests/*.log
+tests/*.trs

@@ -1,0 +1,22 @@
+#!/bin/sh
+. "${srcdir=.}/init.sh"; path_prepend_ ../src
+
+echo 'hello
+helllo
+hullo
+halo
+help
+world' > input-threshold1.txt
+
+cat > expected-threshold1.out <<EOF
+hello
+helllo
+hullo
+EOF
+
+# run grep with --approx=1
+grep --approx=1 hello input-threshold1.txt > actual-threshold1.out || fail_ "grep failed"
+
+compare expected-threshold1.out actual-threshold1.out || fail_ "output mismatch"
+
+Exit 0
